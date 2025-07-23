@@ -299,5 +299,42 @@ footer {
   color: #fff;
   transform: scale(1.05);
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#infoBtn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+#infoBtn:hover {
+  transform: scale(1.2);
+}
+
+#infoTip {
+  margin-top: 0.5rem;
+  background-color: var(--card-bg);
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: none;
+  font-style: italic;
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#infoTip.show {
+  display: block;
+}
 
 

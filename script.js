@@ -26,3 +26,15 @@ document.querySelectorAll('.skill-tag').forEach(tag => {
     tag.classList.toggle('active');
   });
 });
+const fadeEls = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+fadeEls.forEach(el => observer.observe(el));
+document.getElementById('infoBtn').addEventListener('click', () => {
+  document.getElementById('infoTip').classList.toggle('show');
+});

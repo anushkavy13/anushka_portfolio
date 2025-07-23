@@ -38,3 +38,9 @@ fadeEls.forEach(el => observer.observe(el));
 document.getElementById('infoBtn').addEventListener('click', () => {
   document.getElementById('infoTip').classList.toggle('show');
 });
+let downloadCount = 0;
+
+document.querySelector('.resume-btn').addEventListener('click', () => {
+  downloadCount++;
+  console.log(`Resume downloaded ${downloadCount} times`);
+});
